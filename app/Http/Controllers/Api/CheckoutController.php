@@ -91,10 +91,10 @@ class CheckoutController extends Controller
                 ],
                 'item_details'      =>[
                     [
-                        'id'       => $invoice->product_name,
-                        'price'    => $invoice->price,
-                        'quantity' => $invoice->qty,
-                        'name'     => ucwords(str_replace('_', ' ', $invoice->product_name))
+                        'id'       => $cart->product_id,
+                        'price'    => $cart->price,
+                        'quantity' => $cart->quantity,
+                        'name'     => ucwords(str_replace('_', ' ', $cart->product->title))
                     ]
                 ]
             ];
