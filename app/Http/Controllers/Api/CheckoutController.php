@@ -88,6 +88,14 @@ class CheckoutController extends Controller
                     'email'            => auth()->guard('api')->user()->email,
                     'phone'            => $invoice->phone,
                     'shipping_address' => $invoice->address  
+                ],
+                'item_details'      =>[
+                    [
+                        'id'       => $invoice->product_name,
+                        'price'    => $invoice->price,
+                        'quantity' => $invoice->qty,
+                        'name'     => ucwords(str_replace('_', ' ', $invoice->product_name))
+                    ]
                 ]
             ];
 
