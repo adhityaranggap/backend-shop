@@ -9,6 +9,9 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use NotificationChannels\Telegram\TelegramChannel;
+use NotificationChannels\Telegram\TelegramMessage;
+use Illuminate\Notifications\Notification;
 
 class CheckoutController extends Controller
 {
@@ -177,6 +180,14 @@ class CheckoutController extends Controller
             $data_transaction->update([
                 'status' => 'success'
             ]);
+
+            TelegramMessage::create()
+            // Optional recipient user id.
+            ->to($notifiable->config('services.telegram-bot-api.chatId'))
+            // Markdown supported.
+            ->content("Pembayaran Diterima!\nInvoice .$data_transaction->invoice.\n
+            Total Pembayaran .$data_trasaction->grand_total. ");
+            
 
 
         } elseif($transaction == 'pending'){
