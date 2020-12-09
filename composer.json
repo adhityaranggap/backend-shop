@@ -13,7 +13,6 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "kavist/rajaongkir": "^1.1",
-        "laravel-notification-channels/telegram": "^0.5.1",
         "laravel/fortify": "^1.7",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",

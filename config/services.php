@@ -44,10 +44,6 @@ return [
     'is3ds'         => env('MIDTRANS_IS_3DS', true),             
 
     ],
-    // config/services.php
-    'telegram-bot-api' => [
-    'token' => env('TELEGRAM_BOT_TOKEN', 'YOUR BOT TOKEN HERE'),
-    'chatId' => env('TELEGRAM_CHAT_ID', 'YOUR CHAT ID HERE')
-    ],
+   
 
 ];
