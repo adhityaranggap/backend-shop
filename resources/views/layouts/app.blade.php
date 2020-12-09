@@ -64,7 +64,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-          <i class="fab fa-apple"></i>
+          <i class="fas fa-store"></i>
         </div>
         <div class="sidebar-brand-text mx-3">{{config('app.name')}}</div>
       </a>
